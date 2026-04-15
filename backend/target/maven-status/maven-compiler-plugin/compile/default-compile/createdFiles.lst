@@ -1,0 +1,9 @@
+com\example\messageboard\config\CorsConfig.class
+com\example\messageboard\common\Result.class
+com\example\messageboard\controller\MessageController.class
+com\example\messageboard\entity\Message.class
+com\example\messageboard\util\JsonFileUtil.class
+com\example\messageboard\util\SensitiveWordUtil.class
+com\example\messageboard\MessageBoardApplication.class
+com\example\messageboard\service\MessageService.class
+com\example\messageboard\common\PageResult.class

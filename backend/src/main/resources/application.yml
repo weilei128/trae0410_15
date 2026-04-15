@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 10013
 
 spring:
   application:
@@ -11,6 +11,6 @@ spring:
 
 message:
   data:
-    path: ./data/messages.json
+    path: ./data-10013/messages.json
   sensitive:
-    words: 脏话,暴力,敏感词,广告,垃圾
+    words: 脏话,暴力,敏感词,广告,垃圾,色情,赌博,毒品,诈骗,黑客,攻击,反动,政治,台独,港独,疆独

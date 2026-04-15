@@ -51,13 +51,21 @@ public class SensitiveWordUtil {
             String lowerText = result.toLowerCase();
             int index = lowerText.indexOf(word.toLowerCase());
             while (index != -1) {
-                String replacement = REPLACE_CHAR.repeat(word.length());
+                String replacement = repeatChar(REPLACE_CHAR, word.length());
                 result = result.substring(0, index) + replacement + result.substring(index + word.length());
                 lowerText = result.toLowerCase();
                 index = lowerText.indexOf(word.toLowerCase(), index + replacement.length());
             }
         }
         return result;
+    }
+    
+    private String repeatChar(String ch, int count) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+            sb.append(ch);
+        }
+        return sb.toString();
     }
     
     public Set<String> getSensitiveWords() {
