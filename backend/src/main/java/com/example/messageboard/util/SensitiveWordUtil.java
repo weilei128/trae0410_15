@@ -51,7 +51,11 @@ public class SensitiveWordUtil {
             String lowerText = result.toLowerCase();
             int index = lowerText.indexOf(word.toLowerCase());
             while (index != -1) {
-                String replacement = REPLACE_CHAR.repeat(word.length());
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < word.length(); i++) {
+                    sb.append(REPLACE_CHAR);
+                }
+                String replacement = sb.toString();
                 result = result.substring(0, index) + replacement + result.substring(index + word.length());
                 lowerText = result.toLowerCase();
                 index = lowerText.indexOf(word.toLowerCase(), index + replacement.length());
