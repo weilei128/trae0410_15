@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: message-board
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+message:
+  data:
+    path: ./data/messages.json
+  sensitive:
+    words: 脏话,暴力,敏感词,广告,垃圾
